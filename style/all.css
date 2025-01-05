@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    scrollbar-width: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(226, 226, 226);
+}
+header{
+    background-color: rgb(145, 145, 145);
+    height: max-content;
+}
+h1{
+    padding: 10px;
+    text-align: center;
+}
+#burguer{
+    background-color: white;
+    display: block;
+    position: relative;
+    font-size: 2em;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+}
+#burguer:hover{
+    background-color: black;
+    color: white;
+}
+#idlinks{
+    gap: 5px;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s;
+}
+li{
+    padding: 5px;
+    background-color: rgb(71, 71, 71);
+    transition: all .25s;
+    padding: 10px;
+}
+li:hover{
+    background-color: rgb(131, 131, 131);
+}
+main{
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    height: fit-content;
+}
+p{
+    margin: 30px 10px;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+footer a{
+    position: relative;
+    top: 25%;
+}
+@media screen and (min-width: 600px) and (max-width: 768px){
+    main{
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    #burguer{
+        display: none;
+    }
+    #idlinks{
+        display: flex;
+        gap: 5px;
+        list-style: none;
+        margin-left: 5px;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 768px){
+    main{
+        width: 70%;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 2.5%;
+        padding: 10px;
+        position: relative;
+    }
+    #burguer{
+        display: none;
+    }
+    #idlinks{
+        display: flex;
+        gap: 5px;
+        list-style: none;
+        margin-left: 5px;
+        flex-direction: row;
+    }
+}
+@media print{
+    header, main{
+        border: 1px solid black;
+    }
+    nav, footer a{
+        display: none;
+    }
+    footer::after{
+        content: "Essa versão do site é exclusiva para impressão";
+    }
+}
